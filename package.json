@@ -1,0 +1,54 @@
+{
+  "name": "storyboard-manager",
+  "version": "1.0.0",
+  "description": "本地分镜管理工具 - 管理故事文本、分镜提示词和对应图片",
+  "main": "./out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "package": "npm run build && electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-toolkit/utils": "^3.0.0",
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3",
+    "electron-vite": "^2.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.5.2",
+    "uuid": "^10.0.0",
+    "vite": "^5.3.1"
+  },
+  "dependencies": {},
+  "build": {
+    "appId": "com.storyboard.manager",
+    "productName": "分镜管理器",
+    "copyright": "Copyright © 2026",
+    "asar": true,
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "out/**/*",
+      "!node_modules"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "dir",
+          "arch": ["x64"]
+        }
+      ],
+      "sign": null
+    }
+  }
+}
